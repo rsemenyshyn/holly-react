@@ -1,10 +1,6 @@
-import React from 'react'
-import Layout from '../layouts/index'
-import {
-	Article,
-	ArticleContent,
-	ArticleMedia,
-} from '../components/layout/Article'
+import React from 'react';
+import Layout from '../layouts/index';
+import { Article, ArticleContent, ArticleMedia } from '../components/layout/Article';
 
 export default function AboutPage() {
 	return (
@@ -16,8 +12,8 @@ export default function AboutPage() {
 						@pacovitiello and @DavidePacilio!
 					</p>
 					<p>
-						Holly is suitable for all kind of startups, it's easily
-						customizable, and it's downloadable for personal and commercial use.
+						Holly is suitable for all kind of startups, it&apos;s easily
+						customizable, and it&apos;s downloadable for personal and commercial use.
 					</p>
 					<p>This template is distributed under the MIT License.</p>
 				</ArticleContent>
@@ -30,5 +26,5 @@ export default function AboutPage() {
 				</ArticleMedia>
 			</Article>
 		</Layout>
-	)
+	);
 }

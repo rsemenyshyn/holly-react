@@ -1,22 +1,26 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
-const NAV_LINKS = [
-	{ text: 'Contact', href: '/contact' },
-	{ text: 'About Us', href: '/about' },
-	{ text: "FAQ's", href: '/faqs' },
-	{ text: 'Support', href: '/support' },
-]
+import { routerRoutes, routes } from '../../_helpers/constants';
+
 export default function NavLinks({ className }) {
 	return (
 		<ul className={className}>
-			{NAV_LINKS.map(({ text, href }) => (
-				<li key={text} className="ml-4">
-					<NavLink to={href} activeClassName="is-active" className="text-white">
-						{text}
-					</NavLink>
-				</li>
-			))}
+			{ routerRoutes.map(r => {
+				const isHome = routes.HOME === r.route;
+				const isArticle = routes.PAGE === r.route;
+				return isHome || isArticle ? '' : (
+					<li key={r.text} className="ml-4">
+						<NavLink to={r.route} activeClassName="is-active" className="text-white">
+							{r.text}
+						</NavLink>
+					</li>
+				);
+			}) }
 		</ul>
-	)
+	);
 }
+NavLinks.propTypes = {
+	className: PropTypes.string,
+};

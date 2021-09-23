@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import SocialLinks from './SocialLinks'
-import NavLinks from './NavLinks'
+import { infos } from '../../_helpers/constants';
+import SocialLinks from './SocialLinks';
+import NavLinks from './NavLinks';
 
 export default function Footer() {
 	return (
@@ -10,11 +11,13 @@ export default function Footer() {
 				<div className="relative flex flex-wrap py-10 lg:justify-between">
 					<NavLinks className="inline-flex justify-center flex-none w-full mb-6 lg:flex lg:w-1/2 lg:justify-end lg:order-1 lg:mb-0" />
 					<SocialLinks className="inline-flex justify-center flex-none w-full mb-6 lg:flex lg:justify-end" />
-					<div className="inline-flex justify-center flex-none w-full mb-6 lg:w-1/2 lg:justify-start">
-						&copy; 2018 Holly, all rights reserved
-					</div>
+					{ infos.footer ?
+						<div className="inline-flex justify-center flex-none w-full mb-6 lg:w-1/2 lg:justify-start">
+							{ infos.footer }
+						</div> : ''
+					}
 				</div>
 			</div>
 		</footer>
-	)
+	);
 }

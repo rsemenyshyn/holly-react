@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from 'react'
-import ScrollReveal from 'scrollreveal'
+import React from 'react';
+import ScrollReveal from 'scrollreveal';
 
 function HeroIllustration() {
-	const scrollRevealOneRef = useRef([])
-	const scrollRevealTwoRef = useRef([])
+	const scrollRevealOneRef = React.useRef([]);
+	const scrollRevealTwoRef = React.useRef([]);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (scrollRevealOneRef.current) {
 			scrollRevealOneRef.current.map((ref, index) =>
 				ScrollReveal().reveal(scrollRevealOneRef.current[index], {
@@ -16,7 +16,7 @@ function HeroIllustration() {
 					origin: 'bottom',
 					interval: 200,
 				})
-			)
+			);
 		}
 		if (scrollRevealTwoRef.current) {
 			scrollRevealTwoRef.current.map((ref, index) =>
@@ -28,11 +28,11 @@ function HeroIllustration() {
 					origin: 'right',
 					interval: 150,
 				})
-			)
+			);
 		}
 
-		return () => ScrollReveal().destroy()
-	}, [])
+		return () => ScrollReveal().destroy();
+	}, []);
 
 	return (
 		<>
@@ -693,7 +693,7 @@ function HeroIllustration() {
 				</svg>
 			</div>
 		</>
-	)
+	);
 }
 
-export default HeroIllustration
+export default HeroIllustration;

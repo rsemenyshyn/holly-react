@@ -1,10 +1,6 @@
-import React from 'react'
-import Layout from '../layouts/index'
-import {
-	Article,
-	ArticleContent,
-	ArticleMedia,
-} from '../components/layout/Article'
+import React from 'react';
+import Layout from '../layouts/index';
+import { Article, ArticleContent, ArticleMedia } from '../components/layout/Article';
 
 export default function ContactPage() {
 	return (
@@ -19,5 +15,5 @@ export default function ContactPage() {
 				</ArticleMedia>
 			</Article>
 		</Layout>
-	)
+	);
 }

@@ -1,6 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Logo from './Logo'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+import Logo from './Logo';
 
 function Header({ title = '' }) {
 	return (
@@ -15,7 +17,9 @@ function Header({ title = '' }) {
 				</div>
 			</div>
 		</header>
-	)
+	);
 }
-
-export default Header
+Header.propTypes = {
+	title: PropTypes.string,
+};
+export default Header;

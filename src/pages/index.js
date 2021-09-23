@@ -1,16 +1,18 @@
-import React from 'react'
-import Layout from '../layouts/index'
-import Hero from '../components/hero/Hero'
-import HeroIllustration from '../components/hero/HeroIllustration'
+import React from 'react';
+import Layout from '../layouts/index';
+import Hero from '../components/hero/Hero';
+import HeroIllustration from '../components/hero/HeroIllustration';
+
+import { infos } from '../_helpers/constants';
 
 export default function IndexPage() {
 	return (
 		<Layout>
 			<Hero
-				title="Landing template for startups"
-				content="Our landing page template works for all the devices, so you only have to setup it once, and get beautiful results forever."
+				title={ infos.heroTitle }
+				content={ infos.heroText }
 				illustration={HeroIllustration}
 			/>
 		</Layout>
-	)
+	);
 }

@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Header from '../components/layout/Header'
-import Main from '../components/layout/Main'
-import Footer from '../components/layout/Footer'
+import Header from '../components/layout/Header';
+import Main from '../components/layout/Main';
+import Footer from '../components/layout/Footer';
 
 export default function Layout({ children }) {
 	return (
@@ -14,5 +15,8 @@ export default function Layout({ children }) {
 				<Footer />
 			</div>
 		</div>
-	)
+	);
 }
+Layout.propTypes = {
+  children: PropTypes.any.isRequired,
+};

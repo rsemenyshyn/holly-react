@@ -1,15 +1,16 @@
-import React, { Component } from 'react'
-import classnames from 'classnames'
+import React from 'react';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
-class NewsletterForm extends Component {
+class NewsletterForm extends React.Component {
 	constructor(props) {
-		super(props)
-		this.state = { email: '' }
+		super(props);
+		this.state = { email: '' };
 	}
 
 	render() {
-		const { className, submit = 'Submit' } = this.props
-		const { email } = this.state
+		const { className, submit = 'Submit' } = this.props;
+		const { email } = this.state;
 
 		return (
 			<form
@@ -36,8 +37,13 @@ class NewsletterForm extends Component {
 					</button>
 				</div>
 			</form>
-		)
+		);
 	}
 }
 
-export default NewsletterForm
+NewsletterForm.propTypes = {
+	className: PropTypes.string,
+	submit: PropTypes.string,
+};
+
+export default NewsletterForm;
