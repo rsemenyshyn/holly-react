@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 const NOTION_API_URL = 'https://api.notion.com/v1';
-
+const NOTION_API_URL_WORKER = process.env.REACT_APP_NOTION_WORKER;
+const NOTION_API_SECRET = process.env.REACT_APP_NOTION_SERCET;
+const NOTION_API_DB = process.env.REACT_APP_NOTION_DB;
 
 const config = {
 	headers: {
@@ -42,5 +44,5 @@ export function loadBlogPages() {
 }
 
 export function loadBlogArticleToRender(id) {
-	return doGet(`${NOTION_API_URL_WORKER}/page/${id}`, null);
+	return doGet(`${NOTION_API_URL_WORKER}/page/${id}`, {});
 }

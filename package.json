@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "build:css": "postcss src/assets/css/postcss.css -o src/assets/css/style.css --no-map",
-    "build:js": "react-scripts build",
+    "build:js": "env-cmd -f .env.local react-scripts build",
     "build": "npm-run-all build:css build:js",
     "deploy": "npm run build && gh-pages -d build",
-    "start:js": "react-scripts start",
+    "start:js": "env-cmd -f .env.local react-scripts start",
     "start": "npm-run-all -p watch:css start:js",
     "watch:css": "watch 'npm run build:css' src/assets/css/theme"
   },
@@ -26,6 +26,7 @@
     "autoprefixer": "^10.2.5",
     "axios": "^0.21.4",
     "classnames": "^2.3.1",
+    "env-cmd": "^10.1.0",
     "postcss": "^8.2.13",
     "postcss-cli": "^8.3.1",
     "postcss-custom-properties": "^11.0.0",
