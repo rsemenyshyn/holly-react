@@ -19,16 +19,18 @@ SocialLinkItem.propTypes = {
 	link: PropTypes.object.isRequired,
 };
 
-
 export default function SocialLinks({ className }) {
 	return (
 		<ul className={classnames('list-reset', className)}>
-			{socialLinks.map((link) => (
-				<SocialLinkItem key={link.name} link={link} />
-			))}
+			{ socialLinks.map(link => {
+				return link.url ? (
+					<SocialLinkItem key={link.name} link={link} />
+				) : '';
+			}) }
 		</ul>
 	);
 }
+
 SocialLinks.propTypes = {
 	className: PropTypes.string,
 };

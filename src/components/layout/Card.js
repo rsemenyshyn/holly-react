@@ -10,7 +10,7 @@ const Card = ({ title, url, image, tags, date }) => {
 			className={'w-full block shadow-xl relative rounded-xl bg-center bg-no-repeat bg-cover'}
 			style={{ backgroundImage: `url(${ image })`, paddingBottom: '70%' }}
 		>
-			<h2 className={'w-full absolute bottom-0 mb-5 text-white p-5 bg-primary-400 bg-opacity-50'}>{ title }</h2>
+			<h2 className={'w-full absolute bottom-0 mb-5 text-white p-5 bg-primary-500 bg-opacity-50'}>{ title }</h2>
 		</NavLink>
 	);
 };
