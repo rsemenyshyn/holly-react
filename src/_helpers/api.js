@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+const NOTION_API_URL = 'https://api.notion.com/v1';
 
 
 const config = {
@@ -40,6 +41,6 @@ export function loadBlogPages() {
 	return doPost(`${NOTION_API_URL}/databases/${NOTION_API_DB}/query`, null, null, true);
 }
 
-export function loadBlogArticle(id) {
-	return doGet(`${NOTION_API_URL}/pages/${id}`, null, true);
+export function loadBlogArticleToRender(id) {
+	return doGet(`${NOTION_API_URL_WORKER}/page/${id}`, null);
 }

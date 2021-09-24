@@ -59,8 +59,8 @@ function Hero({ title, content, illustration: Illustration }) {
 							/>
               */ }
 							<div className={'mt-5'}>
-                <Blog />
-              </div>
+								<Blog />
+							</div>
 						</div>
 					</div>
 

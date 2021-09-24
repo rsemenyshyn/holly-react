@@ -17,6 +17,7 @@ export default function Layout({ children }) {
 		</div>
 	);
 }
+
 Layout.propTypes = {
-  children: PropTypes.any.isRequired,
+	children: PropTypes.any.isRequired,
 };

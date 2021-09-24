@@ -1,7 +1,8 @@
-import SupportPage from '../pages/support';
-import ContactPage from '../pages/contact';
-import AboutPage from '../pages/about';
-import FaqsPage from '../pages/faqs';
+import Layout from '../layouts';
+//import SupportPage from '../pages/support';
+//import ContactPage from '../pages/contact';
+//import AboutPage from '../pages/about';
+//import FaqsPage from '../pages/faqs';
 import IndexPage from '../pages/index';
 import Page from '../pages/page';
 
@@ -27,8 +28,8 @@ export const routerRoutes = [
 	{ route: routes.FAQS, component: FaqsPage, text: 'FAQ\'s' },
 	{ route: routes.SUPPORT, component: SupportPage, text: 'Support' },
 	*/
-	{ route: routes.HOME, component: IndexPage },
-	{ route: routes.PAGE, component: Page },
+	{ route: routes.HOME, component: IndexPage, layout: Layout },
+	{ route: routes.PAGE, component: Page, layout: Layout },
 ];
 
 export const socialLinks = [
