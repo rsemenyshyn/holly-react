@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build:css": "postcss src/assets/css/postcss.css -o src/assets/css/style.css --no-map",
-    "build:js": "env-cmd -f .env.local react-scripts build",
+    "build:js": "react-scripts build",
     "build": "npm-run-all build:css build:js",
     "deploy": "npm run build && gh-pages -d build",
     "start:js": "env-cmd -f .env.local react-scripts start",
