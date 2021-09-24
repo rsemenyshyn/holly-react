@@ -63,7 +63,9 @@ ArticleBody.propTypes = {
 export function ArticleMedia({ children }) {
 	return (
 		<div className="relative py-10 article--media -right-10 lg:right-0 lg:py-0 lg:w-full">
-			<span className="inline-flex">{children}</span>
+			<span className="inline-flex">
+				{ children }
+			</span>
 		</div>
 	);
 }

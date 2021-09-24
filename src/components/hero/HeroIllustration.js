@@ -393,7 +393,7 @@ function HeroIllustration() {
 			</div>
 			<div
 				ref={(el) => (scrollRevealOneRef.current[3] = el)}
-				className="absolute hero-ball hero-ball-5 is-revealing"
+				className="absolute hero-ball hero-ball-5 is-revealing z-20"
 				style={{ top: '500px' }}
 			>
 				<HeroIllustrationCircleXS />

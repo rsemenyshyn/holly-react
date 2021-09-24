@@ -28,6 +28,8 @@
     "classnames": "^2.3.1",
     "env-cmd": "^10.1.0",
     "framer-motion": "^4.1.17",
+    "i": "^0.3.7",
+    "npm": "^7.24.1",
     "postcss": "^8.2.13",
     "postcss-cli": "^8.3.1",
     "postcss-custom-properties": "^11.0.0",
@@ -38,8 +40,10 @@
     "react-dom": "^17.0.2",
     "react-notion": "^0.10.0",
     "react-router-dom": "^5.2.0",
+    "react-scroll-parallax": "^2.4.0",
     "scrollreveal": "^4.0.9",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.1.2",
+    "ua-parser-js": "^0.7.28"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

@@ -10,12 +10,17 @@ const Blog = () => {
 	const pages = useNotionBlog();
 
 	return (
-		<div className="grid grid-flow-col grid-cols-2 gap-4">
+		<div className="flex flex-wrap">
 			{ pages.map(p => {
 				const obj = notionPageToObj(p);
 				return (
 					<AnimatePresence key={p.id}>
-						<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							className={'w-full md:w-1/2 pb-4 pl-2 pr-2'}
+						>
 							<Card url={obj.url} image={obj.img} title={obj.title} tags={obj.tags} date={obj.date}/>
 						</motion.div>
 					</AnimatePresence>

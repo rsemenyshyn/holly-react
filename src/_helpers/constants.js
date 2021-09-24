@@ -17,8 +17,8 @@ export const routes = {
 
 export const infos = {
 	header: 'Keep IT simple',
-	footer: '',
-	heroTitle: 'My notes',
+	footer: `© ${new Date().getFullYear()} Holly, all rights reserved`,
+	heroTitle: 'Geek blog',
 	heroText: 'Just some simple articles of mine, in order not to forget the useful stuff. Go ahead, keep IT simple!',
 };
 
@@ -50,4 +50,20 @@ export const socialLinks = [
 		url: '',
 		svg: '<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#FFFFFF" /></svg>',
 	},
+	{
+		name: 'LinkedIn',
+		url: 'https://www.linkedin.com/in/rsemenyshyn/',
+		svg: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M 12.667969 0 L 3.332031 0 C 1.492188 0 0 1.492188 0 3.332031 L 0 12.667969 C 0 14.507812 1.492188 16 3.332031 16 L 12.667969 16 C 14.507812 16 16 14.507812 16 12.667969 L 16 3.332031 C 16 1.492188 14.507812 0 12.667969 0 Z M 5.332031 12.667969 L 3.332031 12.667969 L 3.332031 5.332031 L 5.332031 5.332031 Z M 4.332031 4.488281 C 3.6875 4.488281 3.167969 3.960938 3.167969 3.3125 C 3.167969 2.664062 3.6875 2.136719 4.332031 2.136719 C 4.976562 2.136719 5.5 2.664062 5.5 3.3125 C 5.5 3.960938 4.976562 4.488281 4.332031 4.488281 Z M 13.332031 12.667969 L 11.332031 12.667969 L 11.332031 8.929688 C 11.332031 6.683594 8.667969 6.855469 8.667969 8.929688 L 8.667969 12.667969 L 6.667969 12.667969 L 6.667969 5.332031 L 8.667969 5.332031 L 8.667969 6.511719 C 9.597656 4.785156 13.332031 4.660156 13.332031 8.160156 Z M 13.332031 12.667969" fill="#FFFFFF"/></svg>',
+	},
 ];
+
+export const media = {
+	DEVICE_MOBILE: 'mobile',
+	DEVICE_TABLET: 'tablet',
+	DEVICE_DESKTOP: 'desktop',
+	DEVICE_WIDTH_MOBILE: 520,
+	DEVICE_WIDTH_MOBILE_MAX: 640,
+	DEVICE_WIDTH_TABLET: 768,
+	DEVICE_WIDTH_TABLET_MAX: 1024,
+	DEVICE_WIDTH_DESKTOP: 1280,
+};

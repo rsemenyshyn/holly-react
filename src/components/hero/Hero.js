@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // import NewsletterForm from '../forms/NewsletterForm';
 import Blog from '../notion/Blog';
+import { useWindowSize } from '../../_hooks/useWindowSize';
 
 function Hero({ title, content, illustration: Illustration }) {
 	const scrollRevealRef = React.useRef([]);
@@ -24,13 +25,15 @@ function Hero({ title, content, illustration: Illustration }) {
 		return () => ScrollReveal().destroy();
 	}, []);
 
+	const size = useWindowSize();
+
 	return (
 		<section className="text-center lg:w-full lg:text-left lg:py-20">
 			<div className="w-full max-w-6xl px-6 mx-auto hero">
 				<div className="relative hero-inner lg:flex">
 					<div
 						className="pt-10 pb-16 hero-copy lg:pt-16 lg:pr-20"
-						style={{ minWidth: '600px' }}
+						style={{ minWidth: size.isMobileDevice ? '300px' : '600px' }}
 					>
 						<div className="w-full max-w-3xl mx-auto">
 							{ title ?
@@ -64,9 +67,11 @@ function Hero({ title, content, illustration: Illustration }) {
 						</div>
 					</div>
 
-					<div className="relative py-10 right-10 md:right-20 lg:right-0 lg:p-0">
-						<Illustration />
-					</div>
+					{ !size.isMobileDevice ?
+						<div className="relative py-10 right-10 md:right-20 lg:right-0 lg:p-0">
+							<Illustration />
+						</div> : ''
+					}
 				</div>
 			</div>
 		</section>

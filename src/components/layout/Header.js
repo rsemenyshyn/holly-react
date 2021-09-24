@@ -12,7 +12,7 @@ function Header({ title = '' }) {
 					<h1 className="m-0 text-md font-bold leading-none uppercase">
 						<Link to="/" className="flex items-center no-underline relative pb-5">
 							<Logo className="mr-2 absolute left-0 top-0"/>
-              <span className="ml-12 mt-3">{title}</span>
+							<span className="ml-12 mt-3">{title}</span>
 						</Link>
 					</h1>
 				</div>

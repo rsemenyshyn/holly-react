@@ -1,4 +1,5 @@
 import React from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Routes from './routes/index';
 import AppRouter from './routes/AppRouter';
@@ -8,14 +9,16 @@ import { LayoutContextProvider } from './layouts/LayoutContext';
 
 const App = () => {
 	return (
-		<AppRouter>
-			<ErrorBoundary>
-				<GlobalHistory />
-				<LayoutContextProvider>
-					<Routes />
-				</LayoutContextProvider>
-			</ErrorBoundary>
-		</AppRouter>
+		<ParallaxProvider>
+			<AppRouter>
+				<ErrorBoundary>
+					<GlobalHistory />
+					<LayoutContextProvider>
+						<Routes />
+					</LayoutContextProvider>
+				</ErrorBoundary>
+			</AppRouter>
+		</ParallaxProvider>
 	);
 };
 export default App;

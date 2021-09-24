@@ -8,7 +8,7 @@ function SocialLinkItem({ link }) {
 	const { name, url, svg } = link;
 	return (
 		<li className="ml-4">
-			<a href={url}>
+			<a href={url} target="_blank" rel="noreferrer">
 				<span className="sr-only">{name}</span>
 				<div dangerouslySetInnerHTML={{ __html: svg }} />
 			</a>
