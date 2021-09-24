@@ -1,7 +1,7 @@
-const { fontFamily } = require(`tailwindcss/defaultTheme`)
-const colors = require('tailwindcss/colors')
-const twForms = require('@tailwindcss/forms')
-const twTypography = require('@tailwindcss/typography')
+const { fontFamily } = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
+const twForms = require('@tailwindcss/forms');
+const twTypography = require('@tailwindcss/typography');
 
 module.exports = {
 	purge: {
@@ -46,4 +46,4 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-}
+};

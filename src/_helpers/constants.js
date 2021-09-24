@@ -16,6 +16,7 @@ export const routes = {
 };
 
 export const infos = {
+	header: 'Keep IT simple',
 	footer: '',
 	heroTitle: 'My notes',
 	heroText: 'Just some simple articles of mine, in order not to forget the useful stuff',
