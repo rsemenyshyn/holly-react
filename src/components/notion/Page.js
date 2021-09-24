@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NotionRenderer } from 'react-notion';
 
+import '../../assets/extra/notion.css';
 import { loadBlogArticleToRender } from '../../_helpers/api';
 
 const Page = ({ id }) => {

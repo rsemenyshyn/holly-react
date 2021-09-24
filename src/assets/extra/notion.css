@@ -1,0 +1,8 @@
+
+main.notion figure.notion-asset-wrapper {
+  max-width: 150%;
+}
+
+main.notion figure.notion-asset-wrapper div {
+  padding-bottom: 50px !important;
+}
