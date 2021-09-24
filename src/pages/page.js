@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { Article, ArticleContent, ArticleMedia } from '../components/layout/Article';
 import { default as BlogPage } from '../components/notion/Page';
@@ -21,7 +22,11 @@ const Page = (props) => {
 
 			<ArticleMedia>
 				{ data && data.img ?
-					<img src={data.img} alt={data.title} /> : ''
+          <AnimatePresence>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+					    <img src={data.img} alt={data.title} className={'shadow-2xl rounded-l-xl z-10'} />
+            </motion.div>
+          </AnimatePresence> : ''
 				}
 			</ArticleMedia>
 		</Article>

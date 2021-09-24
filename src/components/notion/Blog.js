@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import Card from '../layout/Card';
 import { notionPageToObj } from '../../_helpers/api_mapping';
@@ -13,9 +14,11 @@ const Blog = () => {
 			{ pages.map(p => {
 				const obj = notionPageToObj(p);
 				return (
-					<div key={p.id}>
-						<Card url={obj.url} image={obj.img} title={obj.title} tags={obj.tags} date={obj.date}/>
-					</div>
+					<AnimatePresence key={p.id}>
+						<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+							<Card url={obj.url} image={obj.img} title={obj.title} tags={obj.tags} date={obj.date}/>
+						</motion.div>
+					</AnimatePresence>
 				);
 			})}
 		</div>

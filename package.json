@@ -27,6 +27,7 @@
     "axios": "^0.21.4",
     "classnames": "^2.3.1",
     "env-cmd": "^10.1.0",
+    "framer-motion": "^4.1.17",
     "postcss": "^8.2.13",
     "postcss-cli": "^8.3.1",
     "postcss-custom-properties": "^11.0.0",
