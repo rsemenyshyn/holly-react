@@ -19,7 +19,7 @@ export const infos = {
 	header: '',
 	footer: `© ${new Date().getFullYear()} Holly, all rights reserved`,
 	heroTitle: '',
-	heroText: 'Just some simple articles of mine, in order not to forget the useful stuff. Go ahead, keep IT simple!',
+	heroText: '',
 };
 
 export const routerRoutes = [

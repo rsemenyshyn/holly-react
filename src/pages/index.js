@@ -21,7 +21,7 @@ export default function IndexPage() {
 			/>
 			<Hero
 				title={ data ? data.title : infos.heroTitle }
-				content={ infos.heroText }
+				content={ data ? data.description : infos.heroText }
 				illustration={HeroIllustration}
 			/>
 		</>
