@@ -7,7 +7,6 @@ let blogRequested = false;
 export function useNotionBlog() {
 
 	const context = React.useContext(LayoutContext);
-
 	const [pages, setPages] = React.useState(context.blog);
 	const [info, setInfo] = React.useState(context.info);
 
@@ -26,6 +25,13 @@ export function useNotionBlog() {
 			}
 		}
 	});
+
+	React.useEffect(() => {
+		if (context) {
+			setInfo(context.info);
+			setPages(context.blog);
+		}
+	}, [context]);
 
 	return { pages: pages, info: info };
 }
