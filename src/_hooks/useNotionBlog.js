@@ -1,22 +1,31 @@
 import React from 'react';
 import LayoutContext from '../layouts/LayoutContext';
 
-import { loadBlogPages } from '../_helpers/api';
+import { loadBlogPages, loadBlogInfo } from '../_helpers/api';
 
+let blogRequested = false;
 export function useNotionBlog() {
 
 	const context = React.useContext(LayoutContext);
 
-	const [pages, setPages] = React.useState([]);
+	const [pages, setPages] = React.useState(context.blog);
+	const [info, setInfo] = React.useState(context.info);
+
 	React.useEffect(() => {
 		if (!Array.isArray(pages) || (Array.isArray(pages) && !pages.length)) {
-			loadBlogPages().then(resp => {
-				if (resp && resp.results && Array.isArray(resp.results) && resp.results.length) {
-					context.updateBlog(resp.results, blog => setPages(blog));
-				}
-			});
+			if (!blogRequested) {
+				blogRequested = true;
+				loadBlogPages().then(resp => {
+					if (resp && resp.results && Array.isArray(resp.results) && resp.results.length) {
+						context.updateBlog(resp.results, blog => setPages(blog));
+					}
+				});
+				loadBlogInfo().then(resp => {
+					context.updateInfo(resp, blog => setInfo(blog));
+				});
+			}
 		}
-	}, [pages, context]);
+	});
 
-	return pages;
+	return { pages: pages, info: info };
 }

@@ -11,7 +11,7 @@ class LayoutContextProvider extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { blog: null };
+		this.state = { blog: null, info: null };
 	}
 
 	updateBlog = (blog, callback) => {
@@ -19,13 +19,23 @@ class LayoutContextProvider extends React.Component {
 		this.setState({ blog: blog }, () => callback(blog));
 	};
 
-	render() {
-		return (
-			<Provider value={{ blog: this.state.blog, updateBlog: this.updateBlog }}>
-				{ this.props.children ? this.props.children : '' }
-			</Provider>
-		);
-	}
+  updateInfo = (info, callback) => {
+  	callback = callback ? callback : () => {};
+  	this.setState({ info: info }, () => callback(info));
+  }
+
+  render() {
+  	return (
+  		<Provider value={{
+  			blog: this.state.blog,
+  			updateBlog: this.updateBlog,
+  			info: this.state.info,
+  			updateInfo: this.updateInfo,
+  		}}>
+  			{ this.props.children ? this.props.children : '' }
+  		</Provider>
+  	);
+  }
 
 }
 

@@ -7,11 +7,11 @@ import { useNotionBlog } from '../../_hooks/useNotionBlog';
 
 const Blog = () => {
 
-	const pages = useNotionBlog();
+	const pages = useNotionBlog().pages;
 
 	return (
 		<div className="flex flex-wrap">
-			{ pages.map(p => {
+			{ Array.isArray(pages) ? pages.map(p => {
 				const obj = notionPageToObj(p);
 				return (
 					<AnimatePresence key={p.id}>
@@ -25,7 +25,7 @@ const Blog = () => {
 						</motion.div>
 					</AnimatePresence>
 				);
-			})}
+			}) : ''}
 		</div>
 	);
 };

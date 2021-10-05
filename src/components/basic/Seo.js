@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import logo_desktop from 'leagent-style/src/assets/images/logos/logo.svg';
-
 const Seo = ({ title, description, image }) => {
 
-	image = image ? image : logo_desktop;
+	image = image ? image : '';
 	const url = window ? window.location.href : '';
 
 	return (

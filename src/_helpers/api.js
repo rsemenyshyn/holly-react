@@ -43,6 +43,10 @@ export function loadBlogPages() {
 	return doPost(`${NOTION_API_URL}/databases/${NOTION_API_DB}/query`, null, null, true);
 }
 
+export function loadBlogInfo() {
+	return doGet(`${NOTION_API_URL}/databases/${NOTION_API_DB}`, null, true);
+}
+
 export function loadBlogArticleToRender(id) {
 	return doGet(`${NOTION_API_URL_WORKER}/page/${id}`, {});
 }

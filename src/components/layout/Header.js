@@ -3,8 +3,16 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import Logo from './Logo';
+import { infos } from '../../_helpers/constants';
+import { useNotionBlog } from '../../_hooks/useNotionBlog';
+import { notionDatabaseToObj } from '../../_helpers/api_mapping';
 
 function Header({ title = '' }) {
+
+	const pages = useNotionBlog();
+	const data = pages.info ? notionDatabaseToObj(pages.info) : null;
+	title = title ? title : (data ? data.head : infos.header);
+
 	return (
 		<header className="relative py-6">
 			<div className="w-full max-w-6xl px-6 mx-auto">

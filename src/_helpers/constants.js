@@ -16,9 +16,9 @@ export const routes = {
 };
 
 export const infos = {
-	header: 'Keep IT simple',
+	header: '',
 	footer: `© ${new Date().getFullYear()} Holly, all rights reserved`,
-	heroTitle: 'Geek blog',
+	heroTitle: '',
 	heroText: 'Just some simple articles of mine, in order not to forget the useful stuff. Go ahead, keep IT simple!',
 };
 

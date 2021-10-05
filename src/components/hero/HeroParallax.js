@@ -14,9 +14,10 @@ const HeroParallax = () => {
 	const arrOfCircles = [HeroIllustrationCircleMD, HeroIllustrationCircleLG, HeroIllustrationCircleLG, HeroIllustrationCircleXL];
 
 	React.useEffect(() => {
-		if (ref && ref.current) {
+		const height = ref && ref.current && ref.current.offsetHeight ? ref.current.offsetHeight : 0;
+		if (height) {
 			new ResizeObserver(() => {
-				setNum(Math.round(ref.current.offsetHeight / 300));
+				setNum(Math.round(height / 300));
 			}).observe(ref.current);
 		}
 	}, [ref]);
