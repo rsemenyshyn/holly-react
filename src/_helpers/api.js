@@ -11,7 +11,7 @@ const config = {
 		'Notion-Version': '2021-05-13',
 	}
 };
-export const corsProxy = 'https://cors.ripka.workers.dev/?';
+export const corsProxy = `${process.env.REACT_APP_NOTION_CORS}`;
 
 // private functions
 function doPost(url, data, conf, useProxy) {
